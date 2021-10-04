@@ -405,59 +405,8 @@
         <div id="content-page" class="content-page">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="iq-card-transparent iq-card-block iq-card-stretch iq-card-height rounded">
-                            <div class="newrealease-contens">
-                                <ul id="newrealease-slider" class="list-inline p-0 m-0 d-flex align-items-center">
-                                    <li class="item">
-                                        <a href="javascript:void(0);">
-                                            <img src="~/BookTheme//BookTheme/html/images/new_realeases/01.jpg" class="img-fluid w-100 rounded" alt="">
-                                        </a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="javascript:void(0);">
-                                            <img src="/BookTheme/html/images/new_realeases/02.jpg" class="img-fluid w-100 rounded" alt="">
-                                        </a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="javascript:void(0);">
-                                            <img src="/BookTheme/html/images/new_realeases/03.jpg" class="img-fluid w-100 rounded" alt="">
-                                        </a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="javascript:void(0);">
-                                            <img src="/BookTheme/html/images/new_realeases/04.jpg" class="img-fluid w-100 rounded" alt="">
-                                        </a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="javascript:void(0);">
-                                            <img src="/BookTheme/html/images/new_realeases/05.jpg" class="img-fluid w-100 rounded" alt="">
-                                        </a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="javascript:void(0);">
-                                            <img src="/BookTheme/html/images/new_realeases/06.jpg" class="img-fluid w-100 rounded" alt="">
-                                        </a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="javascript:void(0);">
-                                            <img src="/BookTheme/html/images/new_realeases/07.jpg" class="img-fluid w-100 rounded" alt="">
-                                        </a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="javascript:void(0);">
-                                            <img src="/BookTheme/html/images/new_realeases/08.jpg" class="img-fluid w-100 rounded" alt="">
-                                        </a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="javascript:void(0);">
-                                            <img src="/BookTheme/html/images/new_realeases/09.jpg" class="img-fluid w-100 rounded" alt="">
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    @await Component.InvokeAsync("BookList")
+
                     <div class="col-lg-12">
                         <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
                             <div class="iq-card-header d-flex justify-content-between align-items-center position-relative">
