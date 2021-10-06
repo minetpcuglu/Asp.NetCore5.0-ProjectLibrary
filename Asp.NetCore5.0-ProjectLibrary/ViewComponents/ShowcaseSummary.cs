@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Asp.NetCore5._0_ProjectLibrary.ViewComponents
 {
-    public class ShowSummary:ViewComponent
+    public class ShowcaseSummary : ViewComponent
     {
         public IViewComponentResult Invoke()
         {
