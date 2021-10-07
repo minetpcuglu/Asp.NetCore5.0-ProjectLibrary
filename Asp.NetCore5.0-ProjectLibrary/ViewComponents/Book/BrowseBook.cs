@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Asp.NetCore5._0_ProjectLibrary.ViewComponents
+namespace Asp.NetCore5._0_ProjectLibrary.ViewComponents.Book
 {
-    public class PreviousAuthors:ViewComponent
+    public class BrowseBook:ViewComponent
     {
         public IViewComponentResult Invoke()
         {
