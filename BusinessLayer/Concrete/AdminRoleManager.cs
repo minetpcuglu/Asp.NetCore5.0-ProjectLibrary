@@ -35,7 +35,7 @@ namespace BusinessLayer.Concrete
 
         public List<AdminRole> GetList()
         {
-            return _adminRoleDal.GetAll();
+            return _adminRoleDal.GetListAll();
         }
 
         public void Update(AdminRole adminRole)

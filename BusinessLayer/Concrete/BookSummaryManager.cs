@@ -35,7 +35,7 @@ namespace BusinessLayer.Concrete
 
         public List<BookSummary> GetList()
         {
-          return  _bookSummaryDal.GetAll();
+          return  _bookSummaryDal.GetListAll();
         }
 
         public void Update(BookSummary bookSummary)

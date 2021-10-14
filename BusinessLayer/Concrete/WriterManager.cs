@@ -35,7 +35,7 @@ namespace BusinessLayer.Concrete
 
         public List<Writer> GetList()
         {
-            return _writerDal.GetAll();
+            return _writerDal.GetListAll();
         }
 
         public void Update(Writer writer)

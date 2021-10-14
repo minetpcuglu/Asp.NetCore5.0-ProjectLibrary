@@ -35,7 +35,7 @@ namespace BusinessLayer.Concrete
 
         public List<RewardPoint> GetList()
         {
-          return  _rewardPointDal.GetAll();
+          return  _rewardPointDal.GetListAll();
         }
 
         public void Update(RewardPoint rewardPoint)

@@ -35,7 +35,12 @@ namespace BusinessLayer.Concrete
 
         public List<Book> GetList()
         {
-            return _bookDal.GetAll();
+            return _bookDal.GetListAll();
+        }
+
+        public List<Book> GetLast4Book()
+        {
+            return _bookDal.GetListAll().Take(4).ToList();
         }
 
         public void Update(Book book)

@@ -12,7 +12,7 @@ namespace DataAccessLayer.Abstract
         void Insert(T t);
         void Delete(T t);
         void Update(T t);
-        List<T> GetAll();
+        List<T> GetListAll();
         List<T> GetListAll(Expression<Func<T, bool>> filter);  //filter 
         T GetById(int id);
     }

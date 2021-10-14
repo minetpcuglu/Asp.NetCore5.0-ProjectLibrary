@@ -35,7 +35,7 @@ namespace BusinessLayer.Concrete
 
         public List<Genre> GetList()
         {
-            return _genreDal.GetAll();
+            return _genreDal.GetListAll();
         }
 
         public void Update(Genre genre)

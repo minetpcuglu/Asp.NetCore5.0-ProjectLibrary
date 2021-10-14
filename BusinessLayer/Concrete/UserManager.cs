@@ -36,7 +36,7 @@ namespace BusinessLayer.Concrete
         public List<User> GetList()
         {
 
-            return _userDal.GetAll();
+            return _userDal.GetListAll();
         }
 
         public void Update(User user)
