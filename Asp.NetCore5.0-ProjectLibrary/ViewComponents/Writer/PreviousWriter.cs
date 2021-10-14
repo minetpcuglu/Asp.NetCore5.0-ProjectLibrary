@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BusinessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +10,11 @@ namespace Asp.NetCore5._0_ProjectLibrary.ViewComponents.Writer
 {
     public class PreviousWriter:ViewComponent
     {
+        WriterManager wm = new WriterManager(new EfWriterDal());
         public IViewComponentResult Invoke()
         {
-            return View();
+            var values = wm.GetList();
+            return View(values);
         }
     }
 }
