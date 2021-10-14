@@ -47,5 +47,10 @@ namespace BusinessLayer.Concrete
         {
             _bookDal.Update(book);
         }
+
+        public List<Book> GetListWithWriter()
+        {
+            return _bookDal.GetListWithBook().Take(4).ToList();
+        }
     }
 }
