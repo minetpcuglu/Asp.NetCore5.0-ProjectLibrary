@@ -12,7 +12,7 @@ namespace DataAccessLayer.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=.;database=CoreLibraryDb;integrated security=true;");
+            optionsBuilder.UseSqlServer("workstation id=CoreLibraryDb.mssql.somee.com;packet size=4096;user id=Terabithia1572_SQLLogin_1;pwd=iu41lvwnlk;data source=CoreLibraryDb.mssql.somee.com;persist security info=False;initial catalog=CoreLibraryDb; ");
 
         }
 
