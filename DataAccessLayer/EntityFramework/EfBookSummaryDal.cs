@@ -20,5 +20,7 @@ namespace DataAccessLayer.EntityFramework
                 return c.BookSummaries.Include(x => x.Book).ToList();
             }
         }
+
+       
     }
 }

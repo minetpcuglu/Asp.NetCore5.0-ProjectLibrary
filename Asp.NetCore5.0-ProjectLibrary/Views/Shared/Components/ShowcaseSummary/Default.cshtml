@@ -1,4 +1,5 @@
-﻿@model EntityLayer.Concrete.BookSummary
+﻿@*@model EntityLayer.Concrete.BookSummary*@
+@model IEnumerable<BookSummary>
 
 
 <div class="col-lg-6">
@@ -22,14 +23,18 @@
                 </div>
             </div>
         </div>
+        @foreach (var summary in Model)
+        {
+
+        
         <div class="iq-card-body">
             <div class="row align-items-center">
                 <div class="col-sm-5 pr-0">
                     <a href="javascript:void();"><img class="img-fluid rounded w-100" src="/BookTheme/html/images/page-img/featured-book.png" alt=""></a>
                 </div>
                 <div class="col-sm-7 mt-3 mt-sm-0">
-                    <h4 class="mb-2">@Model.SummaryName</h4>
-                    <p class="mb-2">Author: Gheg origin</p>
+                    <h4 class="mb-2">Özet:@summary.SummaryName</h4>
+                    <p class="mb-2">Kitap Adı: @summary.Book.BookName</p>
                     <div class="mb-2 d-block">
                         <span class="font-size-12 text-warning">
                             <i class="fa fa-star"></i> 
@@ -39,10 +44,11 @@
                             <i class="fa fa-star"></i>
                         </span>
                     </div>
-                    <span class="text-dark mb-3 d-block">@Model.SummaryDescription.Substring(0, Model.SummaryDescription.Substring(0, 130).LastIndexOf(" "))</span>
+                    @*<span class="text-dark mb-3 d-block">@summary.SummaryDescription.Substring(0, summary.SummaryDescription.Substring(0,2).LastIndexOf(" "))</span>*@
                     <button type="submit" class="btn btn-primary learn-more">Daha Fazla Bilgi...</button>
                 </div>
             </div>
         </div>
+        }
     </div>
 </div>

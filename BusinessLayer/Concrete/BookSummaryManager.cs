@@ -38,9 +38,9 @@ namespace BusinessLayer.Concrete
           return  _bookSummaryDal.GetListAll();
         }
 
-        public List<BookSummary> GetListWithBooks() /*mine buraya bakar mısın*/
+        public List<BookSummary> GetListWithBook() /*mine buraya bakar mısın*/
         {
-            throw new NotImplementedException();
+            return _bookSummaryDal.GetListWithBook();
         }
 
         public void Update(BookSummary bookSummary)
