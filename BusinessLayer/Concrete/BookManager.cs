@@ -50,7 +50,7 @@ namespace BusinessLayer.Concrete
 
         public List<Book> GetListWithWriter()
         {
-            return _bookDal.GetListWithBook().Take(4).ToList();
+            return _bookDal.GetListWithBook().ToList();
         }
     }
 }
