@@ -52,5 +52,10 @@ namespace BusinessLayer.Concrete
         {
             return _bookDal.GetListWithBook().ToList();
         }
+
+        public List<Book> GetListWithWriterGetLast4Book()
+        {
+            return _bookDal.GetListWithBook().Take(4).ToList();
+        }
     }
 }

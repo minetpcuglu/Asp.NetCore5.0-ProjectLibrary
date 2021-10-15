@@ -14,7 +14,7 @@ namespace Asp.NetCore5._0_ProjectLibrary.ViewComponents.Book
         BookManager bm = new BookManager(new EfBookDal());
         public IViewComponentResult Invoke()
         {
-            var values = bm.GetListWithWriter();
+            var values = bm.GetListWithWriterGetLast4Book();
             return View(values);
         }
     }
