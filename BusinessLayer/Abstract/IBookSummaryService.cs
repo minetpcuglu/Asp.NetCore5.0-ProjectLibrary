@@ -13,6 +13,7 @@ namespace BusinessLayer.Abstract
         void Delete(BookSummary bookSummary);
         void Update(BookSummary bookSummary);
         List<BookSummary> GetList();
+        List<BookSummary> GetListWithBooks();
         BookSummary GetById(int id);
     }
 }
