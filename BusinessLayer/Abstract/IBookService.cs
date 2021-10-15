@@ -14,6 +14,7 @@ namespace BusinessLayer.Abstract
         void Update(Book book);
         List<Book> GetList();
         List<Book> GetListWithWriter();
+        List<Book> GetListWithWriterGetLast4Book();
         Book GetById(int id);
     }
 }
