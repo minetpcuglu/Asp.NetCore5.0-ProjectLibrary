@@ -23,18 +23,22 @@
         </div>
         <div class="iq-card-body">
             <ul class="list-inline row mb-0 align-items-center iq-scrollable-block">
-                @foreach (var item in Model)
-                {
-                <li class="col-sm-6 d-flex mb-3 align-items-center">
-                    <div class="icon iq-icon-box mr-3">
-                        <a href="javascript:void();"><img class="img-fluid avatar-60 rounded-circle" src="@item.WriterImage" alt=""></a>
-                    </div>
-                    <div class="mt-1">
-                        <h6>@item.WriterName  @item.WriterSurname</h6>
-                        <p class="mb-0 text-primary">Yayınlanan Kitaplar: <span class="text-body">2831</span></p>
-                    </div>
-                </li>
-                }
+                @{
+                    @foreach (var item in Model)
+                    {
+                        Random r = new Random();
+                        int sayi = r.Next(1, 100);
+                        <li class="col-sm-6 d-flex mb-3 align-items-center">
+                            <div class="icon iq-icon-box mr-3">
+                                <a href="javascript:void();"><img class="img-fluid avatar-60 rounded-circle" src="@item.WriterImage" alt=""></a>
+                            </div>
+                            <div class="mt-1">
+                                <h6>@item.WriterName  @item.WriterSurname</h6>
+                                <p class="mb-0 text-primary">Yayınlanan Kitaplar: <span class="text-body">@sayi</span></p>
+                            </div>
+                        </li>
+                    }
+                    }
             </ul>
         </div>
     </div>
