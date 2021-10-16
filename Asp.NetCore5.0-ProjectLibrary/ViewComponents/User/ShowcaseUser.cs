@@ -6,15 +6,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Asp.NetCore5._0_ProjectLibrary.ViewComponents.Book
+namespace Asp.NetCore5._0_ProjectLibrary.ViewComponents.User
 {
-    public class BrowseBook:ViewComponent
+    public class ShowcaseUser:ViewComponent
     {
-        BookManager bookManager = new BookManager(new EfBookDal());
+        UserManager userManager = new UserManager(new EfUserDal());
         public IViewComponentResult Invoke()
         {
-            var value = bookManager.GetListWithWriterGetList16Book();
-            return View(value);
+            var values = userManager.GetListWithBookSummary();
+            return View(values);
         }
     }
 }

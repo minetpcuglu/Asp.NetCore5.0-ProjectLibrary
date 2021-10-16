@@ -13,6 +13,7 @@ namespace BusinessLayer.Abstract
         void Delete(User user);
         void Update(User user);
         List<User> GetList();
+        List<User> GetListWithBookSummary();
         User GetById(int id);
     }
 }

@@ -15,6 +15,12 @@ namespace Asp.NetCore5._0_ProjectLibrary.Controllers
         {
             var Value = bookManager.GetList();
             return View(Value);
-        }    
+        }   
+        
+        public IActionResult BookListAll()
+        {
+            var value = bookManager.GetListWithWriter();
+            return View(value);
+        }
     }
 }

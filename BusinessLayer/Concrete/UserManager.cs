@@ -39,6 +39,11 @@ namespace BusinessLayer.Concrete
             return _userDal.GetListAll();
         }
 
+        public List<User> GetListWithBookSummary()
+        {
+            return _userDal.GetListWithBookSummary();
+        }
+
         public void Update(User user)
         {
             _userDal.Update(user);
