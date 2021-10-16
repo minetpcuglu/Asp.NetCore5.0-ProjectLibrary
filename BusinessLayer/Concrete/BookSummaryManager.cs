@@ -38,9 +38,15 @@ namespace BusinessLayer.Concrete
           return  _bookSummaryDal.GetListAll();
         }
 
+        public List<BookSummary> GetListWithBook() /*mine buraya bakar mısın*/
+        {
+            return _bookSummaryDal.GetListWithBook();
+        }
+
         public void Update(BookSummary bookSummary)
         {
             _bookSummaryDal.Update(bookSummary);
         }
+    
     }
 }

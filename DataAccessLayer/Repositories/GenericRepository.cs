@@ -1,5 +1,6 @@
 ﻿using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,7 @@ namespace DataAccessLayer.Repositories
 
         public T GetById(int id)
         {
+
             using var c = new Context();
             return c.Set<T>().Find(id);
         }
