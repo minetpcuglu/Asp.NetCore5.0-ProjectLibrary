@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Writer>
+
+<div class="col-lg-6">
+    <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+        <div class="iq-card-header d-flex justify-content-between mb-0">
+            <div class="iq-header-title">
+                <h4 class="card-title">Öne Çıkan Yazarlar</h4>
+            </div>
+            <div class="iq-card-header-toolbar d-flex align-items-center">
+                <div class="dropdown">
+                    <span class="dropdown-toggle p-0 text-body" id="dropdownMenuButton3" data-toggle="dropdown">
+                        Bu Hafta<i class="ri-arrow-down-s-fill"></i>
+                    </span>
+
+                    <div class="dropdown-menu dropdown-menu-right shadow-none" aria-labelledby="dropdownMenuButton3">
+                        <a class="dropdown-item" href="#"><i class="ri-eye-fill mr-2"></i>Görüntüle</a>
+                        <a class="dropdown-item" href="#"><i class="ri-delete-bin-6-fill mr-2"></i>Sil</a>
+                        <a class="dropdown-item" href="#"><i class="ri-pencil-fill mr-2"></i>Düzenle</a>
+                        <a class="dropdown-item" href="#"><i class="ri-printer-fill mr-2"></i>Yazdır</a>
+                        <a class="dropdown-item" href="#"><i class="ri-file-download-fill mr-2"></i>İndir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="iq-card-body">
+            <ul class="list-inline row mb-0 align-items-center iq-scrollable-block">
+                @{
+                    @foreach (var item in Model)
+                    {
+                        Random r = new Random();
+                        int sayi = r.Next(1, 100);
+                        <li class="col-sm-6 d-flex mb-3 align-items-center">
+                            <div class="icon iq-icon-box mr-3">
+                                <a href="javascript:void();"><img class="img-fluid avatar-60 rounded-circle" src="@item.WriterImage" alt=""></a>
+                            </div>
+                            <div class="mt-1">
+                                <h6>@item.WriterName @item.WriterSurname</h6>
+                                <p class="mb-0 text-primary">Yayınlanan Kitaplar: <span class="text-body">@sayi</span></p>
+                            </div>
+                        </li>
+                    }
+                }
+            </ul>
+        </div>
+    </div>
+</div>
