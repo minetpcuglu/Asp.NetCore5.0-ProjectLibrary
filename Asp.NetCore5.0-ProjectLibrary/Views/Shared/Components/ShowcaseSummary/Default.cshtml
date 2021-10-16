@@ -8,11 +8,11 @@
             <div class="iq-header-title">
                 <h4 class="card-title">Öne Çıkan Özetler</h4>
             </div>
-            <div class="iq-card-header-toolbar d-flex align-items-center">
-                <div class="dropdown">
-                    <span class="dropdown-toggle p-0 text-body" id="dropdownMenuButton2" data-toggle="dropdown">
+            <!--<div class="iq-card-header-toolbar d-flex align-items-center">
+                <div class="dropdown">-->
+                    @*<span class="dropdown-toggle p-0 text-body" id="dropdownMenuButton2" data-toggle="dropdown">
                         This Week<i class="ri-arrow-down-s-fill"></i>
-                    </span>
+                    </span>*@
                     @*<div class="dropdown-menu dropdown-menu-right shadow-none" aria-labelledby="dropdownMenuButton2">
                             <a class="dropdown-item" href="#"><i class="ri-eye-fill mr-2"></i>View</a>
                             <a class="dropdown-item" href="#"><i class="ri-delete-bin-6-fill mr-2"></i>Delete</a>
@@ -20,35 +20,35 @@
                             <a class="dropdown-item" href="#"><i class="ri-printer-fill mr-2"></i>Print</a>
                             <a class="dropdown-item" href="#"><i class="ri-file-download-fill mr-2"></i>Download</a>
                         </div>*@
-                </div>
-            </div>
+                <!--</div>
+            </div>-->
         </div>
         @foreach (var summary in Model)
         {
 
-        
-        <div class="iq-card-body">
-            <div class="row align-items-center">
-                <div class="col-sm-5 pr-0">
-                    <a href="javascript:void();"><img class="img-fluid rounded w-100" src="/BookTheme/html/images/page-img/featured-book.png" alt=""></a>
-                </div>
-                <div class="col-sm-7 mt-3 mt-sm-0">
-                    <h4 class="mb-2">Özet:@summary.SummaryName</h4>
-                    <p class="mb-2">Kitap Adı: @summary.Book.BookName</p>
-                    <div class="mb-2 d-block">
-                        <span class="font-size-12 text-warning">
-                            <i class="fa fa-star"></i> 
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </span>
+
+            <div class="iq-card-body">
+                <div class="row align-items-center">
+                    <div class="col-sm-5 pr-0">
+                        <a href="javascript:void();"><img class="img-fluid rounded w-100" src="@summary.Book.BookImage" alt=""></a>
                     </div>
-                    @*<span class="text-dark mb-3 d-block">@summary.SummaryDescription.Substring(0, summary.SummaryDescription.Substring(0,2).LastIndexOf(" "))</span>*@
-                    <button type="submit" class="btn btn-primary learn-more">Daha Fazla Bilgi...</button>
+                    <div class="col-sm-7 mt-3 mt-sm-0">
+                        <p class="mb-2">Kitap Adı: @summary.Book.BookName</p>
+                        <p class="mb-2">Özet Yazan: @summary.User.Name @summary.User.Surname</p>
+                        <div class="mb-2 d-block">
+                            <span class="font-size-12 text-warning">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </span>
+                        </div>
+                        <span class="text-dark mb-3 d-block">@summary.SummaryDescription.Substring(0, summary.SummaryDescription.Substring(0,130).LastIndexOf(" ")) ...</span>
+                        <a href="~/Summary/FeaturedSummary/@summary.SummaryId" class="btn btn-primary learn-more">Daha Fazla Bilgi...</a>
+                    </div>
                 </div>
             </div>
-        </div>
         }
     </div>
 </div>

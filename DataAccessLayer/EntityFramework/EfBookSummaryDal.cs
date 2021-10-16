@@ -17,10 +17,8 @@ namespace DataAccessLayer.EntityFramework
         {
             using (var c = new Context())
             {
-                return c.BookSummaries.Include(x => x.Book).ToList();
+                return c.BookSummaries.Include(x => x.Book ).Include(y=>y.User).ToList();
             }
-        }
-
-       
+        }    
     }
 }

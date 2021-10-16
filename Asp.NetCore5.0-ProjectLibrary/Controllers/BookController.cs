@@ -13,8 +13,8 @@ namespace Asp.NetCore5._0_ProjectLibrary.Controllers
         BookManager bookManager = new BookManager(new EfBookDal());
         public IActionResult Index()
         {
-            var value = bookManager.GetList();
-            return View(value);
+            var Value = bookManager.GetList();
+            return View(Value);
         }    
     }
 }

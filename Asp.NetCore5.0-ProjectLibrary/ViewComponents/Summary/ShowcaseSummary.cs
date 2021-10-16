@@ -14,7 +14,8 @@ namespace Asp.NetCore5._0_ProjectLibrary.ViewComponents.Summary
 
         public IViewComponentResult Invoke()
         {
-            var value = booksummng.GetListWithBook();
+            int id = 1;          
+            var value = booksummng.GetListWithBook().Where(x=>x.SummaryId==id);
             return View(value);
         }
     }
