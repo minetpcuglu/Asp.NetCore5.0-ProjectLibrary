@@ -21,5 +21,13 @@ namespace DataAccessLayer.EntityFramework
                 return c.Books.Include(x => x.Writer).ToList();
             }
         }
+
+        public List<Book> GetListWith16Book()
+        {
+            using (var c = new Context())
+            {
+                return c.Books.Include(x => x.Writer).ToList();
+            }
+        }
     }
 }

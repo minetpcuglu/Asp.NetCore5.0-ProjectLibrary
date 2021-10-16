@@ -15,6 +15,7 @@ namespace BusinessLayer.Abstract
         List<Book> GetList();
         List<Book> GetListWithWriter();
         List<Book> GetListWithWriterGetLast4Book();
+        List<Book> GetListWithWriterGetList16Book();
         Book GetById(int id);
     }
 }

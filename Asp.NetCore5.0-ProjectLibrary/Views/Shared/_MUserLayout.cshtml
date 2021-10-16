@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="~/BookTheme/html/css/style.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="~/BookTheme/html/css/responsive.css">
-    
+
 </head>
 
 <body>
@@ -35,23 +35,11 @@
         @await Html.PartialAsync("TopNavBar");
 
 
-        <!-- Page Content  -->
         <div id="content-page" class="content-page">
             <div class="container-fluid">
                 <div class="row">
                     @RenderBody()
-                    @*burası ne işe yarıyor bilmiyorum*@
-                    @*@await Component.InvokeAsync("BookList")*@
-
-                    @*kitaplara gözat bölümü*@
-                    @await Component.InvokeAsync("BrowseBook")
-                    @*öne çıkan özetler bölümü*@
-                    @await Component.InvokeAsync("ShowcaseSummary")
-                    @*öne çıkan yazarlar bölümü*@
-                    @await Component.InvokeAsync("ShowcaseUser")
-                    @*favori kitaplar bölümü*@
-                    @*@await Component.InvokeAsync("FavoriteBooks")*@
-                    @await Component.InvokeAsync("BookLast4Post") 
+                   
                 </div>
             </div>
         </div>
@@ -60,7 +48,7 @@
     <!-- Footer -->
     @await Html.PartialAsync("Footer");
 
-   
+
     <!-- Footer END -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="~/BookTheme/html/js/jquery.min.js"></script>
