@@ -14,6 +14,8 @@ namespace BusinessLayer.Abstract
         void Update(BookSummary bookSummary);
         List<BookSummary> GetList();
         List<BookSummary> GetListWithBook();
+        List<BookSummary> GetListWithBookId(int id);
+        List<BookSummary> GetBookIdWithUser(int id);
         BookSummary GetById(int id);
     }
 }

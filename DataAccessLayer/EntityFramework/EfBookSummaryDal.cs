@@ -13,12 +13,22 @@ namespace DataAccessLayer.EntityFramework
 {
     public class EfBookSummaryDal : GenericRepository<BookSummary>, IBookSummaryDal
     {
+        public List<BookSummary> GetBookIdWithUser(int id)
+        {
+            //throw new NotImplementedException();
+            using(var c=new Context())
+            {
+                return c.BookSummaries.Include(x => x.User).Where(y => y.BookId == id).ToList();
+            }
+        }
+
         public List<BookSummary> GetListWithBook()
         {
             using (var c = new Context())
             {
                 return c.BookSummaries.Include(x => x.Book ).Include(y=>y.User).ToList();
             }
-        }    
+        }
+
     }
 }

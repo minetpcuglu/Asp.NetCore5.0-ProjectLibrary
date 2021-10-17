@@ -28,6 +28,11 @@ namespace BusinessLayer.Concrete
             _bookSummaryDal.Delete(bookSummary);
         }
 
+        public List<BookSummary> GetBookIdWithUser(int id)
+        {
+            return _bookSummaryDal.GetBookIdWithUser(id);
+        }
+
         public BookSummary GetById(int id)
         {
           return  _bookSummaryDal.GetById(id);
@@ -41,6 +46,11 @@ namespace BusinessLayer.Concrete
         public List<BookSummary> GetListWithBook() /*mine buraya bakar mısın*/
         {
             return _bookSummaryDal.GetListWithBook();
+        }
+
+        public List<BookSummary> GetListWithBookId(int id)
+        {
+            return _bookSummaryDal.GetListAll(x => x.BookId == id);
         }
 
         public void Update(BookSummary bookSummary)
