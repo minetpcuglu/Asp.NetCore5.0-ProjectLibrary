@@ -7,12 +7,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-   public interface IMessageService 
+   public interface IMessageService :IGenericService<Message>
     {
-        void Add(Message message);
-        void Delete(Message message);
-        void Update(Message message);
-        List<Message> GetList();
-        Message GetById(int id);
     }
 }

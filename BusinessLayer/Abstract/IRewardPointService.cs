@@ -7,12 +7,8 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-    public interface IRewardPointService
+    public interface IRewardPointService:IGenericService<RewardPoint>
     {
-        void Add(RewardPoint rewardPoint);
-        void Delete(RewardPoint rewardPoint);
-        void Update(RewardPoint rewardPoint);
-        List<RewardPoint> GetList();
-        RewardPoint GetById(int id);
+
     }
 }
