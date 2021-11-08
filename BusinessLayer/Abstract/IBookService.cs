@@ -7,15 +7,12 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-    public interface IBookService
+    public interface IBookService:IGenericService<Book>
     {
-        void Add(Book book);
-        void Delete(Book book);
-        void Update(Book book);
-        List<Book> GetList();
+    
         List<Book> GetListWithWriter();
         List<Book> GetListWithWriterGetLast4Book();
         List<Book> GetListWithWriterGetList16Book();
-        Book GetById(int id);
+
     }
 }

@@ -7,12 +7,8 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-   public interface IGenreService
+   public interface IGenreService:IGenericService<Genre>
     {
-        void Add( Genre  genre);
-        void Delete(Genre genre);
-        void Update(Genre genre);
-        List<Genre> GetList();
-        Genre GetById(int id);
+      
     }
 }

@@ -26,11 +26,18 @@ namespace Asp.NetCore5._0_ProjectLibrary.Controllers
             var value = bookManager.GetListWithWriter();
             return View(value);
         }
-        public IActionResult SummaryBook(int id)
+        public IActionResult SummaryBook(int id)  //side barda kitap özetin içinde kitaplara ait özetleri açar.
         {
          
             var value = bookSummaryManager.GetBookIdWithUser(id);
             return View(value);
         }
+        public IActionResult Edit(int id)
+        {
+            var value = bookSummaryManager.GetById(id);
+            return PartialView(value);
+        }
+      
+     
     }
 }
