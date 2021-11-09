@@ -1,4 +1,6 @@
-﻿using DataAccessLayer.Concrete;
+﻿using BusinessLayer.Concrete;
+using DataAccessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
@@ -15,7 +17,6 @@ namespace Asp.NetCore5._0_ProjectLibrary.Controllers
    
     public class LoginController : Controller
     {
-
         [AllowAnonymous]
         public IActionResult Index()
         {
@@ -46,5 +47,7 @@ namespace Asp.NetCore5._0_ProjectLibrary.Controllers
             }
 
         }
+       
     }
 }
+

@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewData["Title"] = "AddUser";
+    Layout = "~/Views/Shared/_MUserLayout.cshtml";
+}
+
+@*<div id="content-page" class="content-page">*@
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-lg-12">
+            <div class="iq-card">
+                <div class="iq-card-header d-flex justify-content-between">
+                    <div class="iq-header-title">
+                        <h4 class="card-title">Yeni Kullanıcı </h4>
+                    </div>
+                </div>
+                <div class="iq-card-body">
+                    <div class="new-user-info">
+                        <form method="post" action="~/Login/AddUser">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="fname">İsim:</label>
+                                    <input type="text" class="form-control" id="name" placeholder="İsim" name="Name">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="lname">Soyisim:</label>
+                                    <input type="text" class="form-control" id="lname" placeholder="Soyisim" name="Surname">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="add1">Kullanıcı Adı:</label>
+                                    <input type="text" class="form-control" id="add1" placeholder="Kullanıcı Adı" name="UserName">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Email" name="Email">
+                                </div>
+
+                                <div class="form-group col-sm-12">
+                                    <label>Eğitim Durumu:</label>
+                                    <select class="form-control" id="selectcountry" name="Education">
+                                        <option>Lise</option>
+                                        <option>Lisans</option>
+                                        <option>Yüksek Lisans</option>
+                                        <option>Diğer</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="mobno">Telefon Numarası:</label>
+                                    <input type="text" class="form-control" id="mobno" placeholder="Opsiyonel" name="Telephone">
+                                </div>
+
+
+
+
+                            </div>
+                            <hr>
+                            <h5 class="mb-3">Şİfre İşlemleri</h5>
+                            <div class="row">
+
+                                <div class="form-group col-md-6">
+                                    <label for="pass">Şifre:</label>
+                                    <input type="password" class="form-control" id="pass" placeholder="Şifre" name="Password">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="rpass">Şİfre Tekrar:</label>
+                                    <input type="password" class="form-control" id="rpass" placeholder="Şifre Tekrar ">
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Kaydet</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
